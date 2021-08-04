@@ -15,7 +15,7 @@ The project analyzes the data from dataset obtained from web source [3] and repr
 
 Tools & Technologies:
 
--Hadoop 
+Hadoop
 -Spark
 -Hive Metastore (mysql)
 -Hive
