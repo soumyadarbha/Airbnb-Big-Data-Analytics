@@ -1,0 +1,35 @@
+CREATE SCHEMA Airbnb;
+CREATE EXTERNAL TABLE Airbnb.host (Host_Id INTEGER,Host_Name STRING, Listing_Id INTEGER )
+    COMMENT 'from csv file'
+    row format delimited
+    fields terminated by ','
+    LOCATION 'hdfs://localhost:9000/user/hive/warehouse/host_1'
+    tblproperties("skip.header.line.count"="1");
+
+CREATE EXTERNAL TABLE Airbnb.location (  City STRING,Listing_Id INTEGER, State STRING, Latitude DOUBLE, Longitude DOUBLE )
+    COMMENT 'from csv file'
+    row format delimited
+    fields terminated by ','
+    LOCATION 'hdfs://localhost:9000/user/hive/warehouse/location_1'
+    tblproperties("skip.header.line.count"="1");
+
+CREATE EXTERNAL TABLE Airbnb.listings (Listing_Id INTEGER, Listing_Name STRING )
+    COMMENT 'from csv file'
+    row format delimited
+    fields terminated by ','
+    LOCATION 'hdfs://localhost:9000/user/hive/warehouse/listing_1'
+    tblproperties("skip.header.line.count"="1");
+
+CREATE EXTERNAL TABLE Airbnb.listing_details (Listing_Id INTEGER,Min_Nights INTEGER,No_Of_Reviews INTEGER,Room_Type STRING, Availability_365 INTEGER,Price INTEGER, Review_per_Month DOUBLE )
+    COMMENT 'from csv file'
+    row format delimited
+    fields terminated by ','
+    LOCATION 'hdfs://localhost:9000/user/hive/warehouse/listing_details_1'
+    tblproperties("skip.header.line.count"="1");
+
+CREATE EXTERNAL TABLE Airbnb.predictions (Actual INTEGER, Predict DOUBLE )
+    COMMENT 'from csv file'
+    row format delimited
+    fields terminated by ','
+    LOCATION 'hdfs://localhost:9000/user/hive/warehouse/prediction_1'
+    tblproperties("skip.header.line.count"="1");
