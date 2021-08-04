@@ -15,11 +15,11 @@ The project analyzes the data from dataset obtained from web source [3] and repr
 
 Tools & Technologies:
 
-Hadoop
--Spark
--Hive Metastore (mysql)
--Hive
--Tableau (using MapR Hadoop Hive/Cloudera hadoop connector)
+1. Hadoop
+2. Spark
+3. Hive Metastore (mysql)
+4. Hive
+5. Tableau (using MapR Hadoop Hive/Cloudera hadoop connector)
 
 Algorithms used:
 
